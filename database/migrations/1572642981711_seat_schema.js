@@ -10,7 +10,7 @@ class SeatSchema extends Schema {
       table.integer('booking_id').unsigned().references('bookings.id')
       table.integer('seat_row')
       table.integer('seat_number')
-      table.enu('seat_state', ['available', 'booked'])
+      table.enu('seat_state', ['AVAILABLE', 'BOOKED']).defaultTo('AVAILABLE')
     })
   }
 
