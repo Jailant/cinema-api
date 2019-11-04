@@ -4,6 +4,17 @@
 const Model = use('Model')
 
 class Room extends Model {
+  static get createdAtColumn () {
+    return null
+  }
+
+  static get updatedAtColumn () {
+    return null
+  }
+
+  movieShowings () {
+    return this.hasMany('App/Model/MovieShowing')
+  }
 }
 
 module.exports = Room
