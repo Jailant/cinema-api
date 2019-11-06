@@ -4,6 +4,8 @@
   },
   "extends": "airbnb-base",
   "rules": {
+    "no-plusplus": "off",
+    "no-await-in-loop": "off",
     "arrow-body-style":"off",
     "no-new": 0,
     "no-undef": "off",

@@ -5,19 +5,19 @@ const Model = use('Model')
 
 class MovieShowing extends Model {
   movieShowingTimes () {
-    return this.hasMany('App/Model/MovieShowingTime')
+    return this.hasMany('App/Models/MovieShowingTime')
   }
 
   movie () {
-    return this.belongsTo('App/Model/Movie')
+    return this.belongsTo('App/Models/Movie')
   }
 
   room () {
-    return this.belongsTo('App/Model/Room')
+    return this.belongsTo('App/Models/Room')
   }
 
   cinema () {
-    return this.belongsTo('App/Model/Cinema')
+    return this.belongsTo('App/Models/Cinema')
   }
 }
 

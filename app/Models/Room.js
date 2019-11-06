@@ -13,7 +13,7 @@ class Room extends Model {
   }
 
   movieShowings () {
-    return this.hasMany('App/Model/MovieShowing')
+    return this.hasMany('App/Models/MovieShowing')
   }
 }
 

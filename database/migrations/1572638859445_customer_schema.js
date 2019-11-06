@@ -7,7 +7,7 @@ class CustomerSchema extends Schema {
   up () {
     this.create('customers', table => {
       table.increments()
-      table.integer('user_id').unsigned().references('id').inTable('users')
+      table.integer('user_id').unsigned().references('users.id')
       table.string('customer_phone', 14)
       table.string('customer_credit_card', 40)
       table.timestamps()

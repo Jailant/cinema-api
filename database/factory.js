@@ -19,7 +19,7 @@ Factory.blueprint('App/Models/User', async faker => {
   return {
     username: faker.username(),
     email: faker.email(),
-    password: await Hash.make(faker.password),
+    password: await Hash.make(faker.password()),
     created_at: faker.date()
   }
 })
@@ -27,7 +27,7 @@ Factory.blueprint('App/Models/User', async faker => {
 Factory.blueprint('App/Models/Customer', async faker => {
   return {
     user_id: async () => {
-      return (await Factory.model('App/Models/User').create()).user_id
+      return (await Factory.model('App/Models/User').create()).id
     },
     customer_phone: faker.phone(),
     customer_credit_card: faker.cc({ type: 'Mastercard' })
@@ -76,7 +76,7 @@ Factory.blueprint('App/Models/MovieShowing', async (faker, i, data) => {
   }
 })
 
-Factory.blueprint('App/MovieShowingTime', async (faker, i, data) => {
+Factory.blueprint('App/Models/MovieShowingTime', async (faker, i, data) => {
   return {
     movie_showing_id: data.movie_showing_id,
     hour_to_show: `${faker.hour()}: 00`
@@ -89,12 +89,12 @@ Factory.blueprint('App/Models/Genre', async (faker, i, data) => {
   }
 })
 
-Factory.bluepruint('App/Models/Booking', async (faker, i, data) => {
+Factory.blueprint('App/Models/Booking', async (faker, i, data) => {
   return {
     customer_id: data.customer_id,
     movie_showing_time_id: data.movie_showing_time_id,
     booking_made_date: new Date(),
-    boiking_seat_count: 1
+    booking_seat_count: 1
   }
 })
 

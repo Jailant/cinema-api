@@ -8,7 +8,7 @@ class MovieShowingTimeSchema extends Schema {
     this.create('movie_showing_times', table => {
       table.increments()
       table.integer('movie_showing_id').unsigned().references('movie_showings.id')
-      table.string('hours_to_show', 20)
+      table.string('hour_to_show', 20)
     })
   }
 

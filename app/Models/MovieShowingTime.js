@@ -13,11 +13,11 @@ class MovieShowingTime extends Model {
   }
 
   movieShowing () {
-    return this.belongsTo('App/Model/MovieShowing')
+    return this.belongsTo('App/Models/MovieShowing')
   }
 
   bookings () {
-    return this.hasMany('App/Model/Booking')
+    return this.hasMany('App/Models/Booking')
   }
 }
 

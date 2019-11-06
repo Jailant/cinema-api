@@ -13,11 +13,11 @@ class Booking extends Model {
   }
 
   seats () {
-    return this.hasMany('App/Model/Seat')
+    return this.hasMany('App/Models/Seat')
   }
 
   movieShowingTime () {
-    return this.belongsTo('App/Model/MovieShowingTime')
+    return this.belongsTo('App/Models/MovieShowingTime')
   }
 }
 

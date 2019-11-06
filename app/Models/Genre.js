@@ -13,7 +13,7 @@ class Genre extends Model {
   }
 
   movies () {
-    return this.belongsToMany('App/Model/Movie')
+    return this.belongsToMany('App/Models/Movie')
   }
 }
 

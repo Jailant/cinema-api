@@ -8,7 +8,7 @@ class BookingSchema extends Schema {
     this.create('bookings', table => {
       table.increments()
       table.integer('customer_id').unsigned().references('customers.id').comment('What movie will they see')
-      table.integer('movie_showing_times_id').unsigned().references('movie_showing_times.id').comment('When it has been done')
+      table.integer('movie_showing_time_id').unsigned().references('movie_showing_times.id').comment('When it has been done')
       table.datetime('booking_made_date')
       table.integer('booking_seat_count').comment('Number of seats booked')
     })

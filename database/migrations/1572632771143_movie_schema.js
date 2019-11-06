@@ -10,7 +10,7 @@ class MovieSchema extends Schema {
       table.string('movie_name', 120)
       table.string('movie_director', 100)
       table.string('movie_screenshot', 100).nullable()
-      table.text('movie_synopsis')
+      table.text('movie_sinopsis')
       table.timestamps()
     })
   }

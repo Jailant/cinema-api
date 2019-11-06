@@ -5,14 +5,15 @@ const Schema = use('Schema')
 
 class GenreMovieSchema extends Schema {
   up () {
-    this.create('genre_movies', table => {
+    this.create('genre_movie', table => {
+      table.increments()
       table.integer('movie_id').unsigned().references('movies.id')
-      table.integer('genres_id').unsigned().references('genres.id')
+      table.integer('genre_id').unsigned().references('genres.id')
     })
   }
 
   down () {
-    this.drop('genre_movies')
+    this.drop('genre_movie')
   }
 }
 

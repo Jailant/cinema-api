@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Movie extends Model {
   genres () {
-    return this.belongsToMany('App/Model/Genre')
+    return this.belongsToMany('App/Models/Genre')
   }
 }
 
