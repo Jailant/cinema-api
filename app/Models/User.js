@@ -12,6 +12,7 @@ class User extends Model {
      * it to the database.
      */
     this.addHook('beforeSave', 'UserHook.hashPassword')
+    this.addHook('afterCreate', 'UserHook.setCustomer')
   }
 
   /**
