@@ -12,10 +12,6 @@ class Cinema extends Model {
     return null
   }
 
-  movieShowings () {
-    return this.hasMany('App/Models/MovieShowing')
-  }
-
   rooms () {
     return this.hasMany('App/Models/Room')
   }

@@ -15,10 +15,6 @@ class MovieShowing extends Model {
   room () {
     return this.belongsTo('App/Models/Room')
   }
-
-  cinema () {
-    return this.belongsTo('App/Models/Cinema')
-  }
 }
 
 module.exports = MovieShowing

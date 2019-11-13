@@ -30,7 +30,7 @@ class User extends Model {
   }
 
   customer () {
-    return this.hasOne('App/Model/Customer')
+    return this.hasOne('App/Models/Customer')
   }
 }
 
